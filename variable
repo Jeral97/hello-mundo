@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>   
+
+int main() {
+    std::string jeraldo;
+    int edad = 0;
+
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, jeraldo);
+
+    std::cout << "Enter your age: ";
+    std::cin >> edad;
+
+    std::cout << "Hello, " << jeraldo << "! You are " << edad << " years old." << std::endl;
+
+    bool esMayorDeEdad = (edad >= 18);
+    bool esEdadInvalida = (edad <= 0);
+
+    if (esEdadInvalida) {
+        std::cout << "Invalid age! That's impossible." << std::endl;
+    } 
+    else if (esMayorDeEdad) {
+        std::cout << "You are an adult. You can enter." << std::endl;
+    } 
+    else {
+        std::cout << "You are a minor. Access denied." << std::endl;
+    }
+
+    return 0;
+}
